@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: 
+Sitemap: https://getelio.netlify.app/sitemap.xml
