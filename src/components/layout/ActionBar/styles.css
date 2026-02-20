@@ -1,0 +1,23 @@
+.action-bar {
+    max-width: 600px;
+    /* max-height: 3rem; */
+    background-color: var(--bg-clr-2);
+    border: 1px solid var(--border-clr-1);
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 1.5ex;
+    /* corner-shape: squircle; */
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem;
+    gap: .4rem;
+}
+
+.action-bar .divider {
+    width: 2px;
+    border-radius: 1ex;
+    height: 2rem;
+    background-color: var(--border-clr-1);
+}

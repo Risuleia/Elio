@@ -1,0 +1,5 @@
+.workspace {
+    width: calc(100% - var(--left-toolbar-size) - var(--right-panel-size));
+    height: 100%;
+    position: relative;
+}

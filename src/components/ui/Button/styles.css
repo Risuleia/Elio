@@ -1,0 +1,6 @@
+.btn {
+    background-color: var(--accent-1);
+    padding: .6rem 1rem;
+    line-height: 1;
+    border-radius: 1ex;
+}

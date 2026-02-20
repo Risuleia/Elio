@@ -1,0 +1,21 @@
+.icon-btn {
+    aspect-ratio: 1;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1ex;
+}
+.icon-btn span {
+    font-variation-settings: "wght" 280;
+    font-size: 1.8rem;
+}
+
+.icon-btn:hover,
+.icon-btn:focus {
+    background-color: var(--bg-clr-3);
+}
+
+.icon-btn[data-behavior="toggle"][data-active="true"] {
+    background-color: var(--accent-1);
+}
