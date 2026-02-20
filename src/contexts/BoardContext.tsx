@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useMemo } from "react"
 import type { Board } from "../models/board"
 import type { Camera } from "../models/camera"
-import type { BoardObject, ObjectId, RectObject } from "../models/objects"
+import type { BoardObject, ObjectId } from "../models/objects"
 import { useHistory } from "./HistoryContext"
 import type { HistoryCommand } from "../models/history"
 
