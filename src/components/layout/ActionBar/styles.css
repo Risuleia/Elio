@@ -12,12 +12,12 @@
     justify-content: center;
     align-items: center;
     padding: .4rem;
-    gap: .4rem;
+    gap: .5rem;
 }
 
 .action-bar .divider {
     width: 2px;
-    border-radius: 1ex;
     height: 2rem;
+    border-radius: 1ex;
     background-color: var(--border-clr-1);
 }

@@ -1,16 +1,37 @@
+import type React from 'react'
 import './styles.css'
+import type { JSX } from 'react'
 
-export default function IconButton({
-    icon,
-    behavior,
-    active = false,
-    func
-}: {
-    icon: string,
+interface BaseProps {
     behavior: "toggle" | "action",
     active?: boolean,
+    disabled?: boolean,
     func: () => void
-}) {
+}
+
+interface IconProps extends BaseProps {
+    icon: string,
+    children?: never
+}
+
+interface ChildrenProps extends BaseProps {
+    icon?: never,
+    children: React.ReactNode
+}
+
+type IconButtonProps = IconProps | ChildrenProps
+
+export function IconButton(props: IconProps): JSX.Element
+export function IconButton(props: ChildrenProps): JSX.Element
+
+export function IconButton({
+    icon,
+    children,
+    behavior,
+    disabled = false,
+    active = false,
+    func
+}: IconButtonProps) {
   return (
     <button
         className='icon-btn'
@@ -20,10 +41,15 @@ export default function IconButton({
             func()
             e.currentTarget.blur()
         }}
+        disabled={disabled}
     >
-        <span className="material-symbols-rounded">
-            {icon}
-        </span>
+        {icon ? (
+            <span className="material-symbols-rounded">{icon}</span>
+        ) : (
+            children
+        )}
     </button>
   )
 }
+
+export default IconButton

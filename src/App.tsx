@@ -14,7 +14,7 @@ export default function App() {
     }
 
     function onKeyDown(e: KeyboardEvent) {
-      if (e.ctrlKey && (e.key == "+" || e.key == "-" || e.key == "0")) e.preventDefault()
+      if (e.ctrlKey && (e.key == "+" || e.key == "-" || e.key == "0" || e.key == "=")) e.preventDefault()
     }
 
     const controller = new AbortController()

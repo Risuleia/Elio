@@ -5,10 +5,19 @@
     justify-content: center;
     align-items: center;
     border-radius: 1ex;
+    transition: background-color 250ms ease-in;
 }
 .icon-btn span {
-    font-variation-settings: "wght" 280;
+    font-variation-settings: "wght" 250, "FILL" 0;
     font-size: 1.8rem;
+    transition: font-variation-settings 200ms ease-in-out;
+}
+
+.icon-btn:disabled {
+    background: none !important;
+    transition: none !important;
+    cursor: auto;
+    opacity: .4;
 }
 
 .icon-btn:hover,
@@ -18,4 +27,7 @@
 
 .icon-btn[data-behavior="toggle"][data-active="true"] {
     background-color: var(--accent-1);
+}
+.icon-btn[data-behavior="toggle"][data-active="true"] span {
+    font-variation-settings: "wght" 250, "FILL" 1;
 }

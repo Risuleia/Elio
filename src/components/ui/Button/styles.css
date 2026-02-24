@@ -3,4 +3,11 @@
     padding: .6rem 1rem;
     line-height: 1;
     border-radius: 1ex;
+    transition: opacity 250ms ease-in;
+}
+
+.btn:active,
+.btn:hover,
+.btn:focus {
+    opacity: 0.85;
 }

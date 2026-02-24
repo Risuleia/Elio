@@ -12,4 +12,12 @@ export type Rect = {
 
 export type AABB = Rect
 
-export type Color = string
+declare const __brand: unique symbol
+export type Color = string & { readonly [__brand]: 'Color' }
+export function Color(value: string): Color {
+    if (!/^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(value)) {
+        throw new Error(`Invalid color: ${value}`);
+    }
+
+    return value as Color
+}
